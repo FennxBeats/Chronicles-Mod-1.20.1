@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "chronicles",
+	"version": "${version}",
+	"name": "Chronicles",
+	"description": "This mod adds simple blocks/items that overall improve the experience and create new opportunities.",
+	"authors": [
+		"Fennx1000"
+	],
+	"license": "MIT",
+	"icon": "assets/chronicles/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"fennx1000.chronicles.Chronicles"
+		],
+		"client": [
+			"fennx1000.chronicles.ChroniclesClient"
+		],
+		"fabric-datagen": [
+			"fennx1000.chronicles.ChroniclesDataGenerator"
+		]
+	},
+	"mixins": [
+		"chronicles.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.3",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
