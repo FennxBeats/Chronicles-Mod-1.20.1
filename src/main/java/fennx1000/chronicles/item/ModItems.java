@@ -16,7 +16,7 @@ public class ModItems {
     public static final Item CHRONOS_PAGE = registerItem("chronos_page", new Item(new FabricItemSettings().maxCount(16).fireproof().rarity(Rarity.EPIC)));
 
     private static void addItemsToInventoryTabItemGroup(FabricItemGroupEntries entries) {
-        entries.add(CHRONOS_PAGE);
+        // entries.add(CHRONOS_PAGE);
     }
 
     private  static Item registerItem(String name, Item item) {

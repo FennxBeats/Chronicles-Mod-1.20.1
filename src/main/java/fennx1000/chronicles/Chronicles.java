@@ -1,5 +1,6 @@
 package fennx1000.chronicles;
 
+import fennx1000.chronicles.item.ModItemGroups;
 import fennx1000.chronicles.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -14,7 +15,7 @@ public class Chronicles implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 
 		LOGGER.info("Chronicles Initialized!");
