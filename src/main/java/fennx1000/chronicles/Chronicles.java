@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class Chronicles implements ModInitializer {
+
+	// mod id \/
 	public static final String MODID = "chronicles";
     public static final Logger LOGGER = LoggerFactory.getLogger(MODID);
 
