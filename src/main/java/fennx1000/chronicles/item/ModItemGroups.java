@@ -14,6 +14,7 @@ public class ModItemGroups {
             new Identifier(Chronicles.MODID, "chronicles_group"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.chronicles_group"))
                     .icon(() -> new ItemStack(ModItems.CHRONOS_PAGE)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.CHRONOS_BOOK);
                         entries.add(ModItems.CHRONOS_PAGE);
                     }).build());
 

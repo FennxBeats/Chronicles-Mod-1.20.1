@@ -1,6 +1,7 @@
 package fennx1000.chronicles.item;
 
 import fennx1000.chronicles.Chronicles;
+import fennx1000.chronicles.item.custom.ChronosBookItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
@@ -13,7 +14,10 @@ import net.minecraft.util.Rarity;
 
 public class ModItems {
 
-    public static final Item CHRONOS_PAGE = registerItem("chronos_page", new Item(new FabricItemSettings().maxCount(16).fireproof().rarity(Rarity.EPIC)));
+    public static final Item CHRONOS_PAGE = registerItem("chronos_page",
+            new Item(new FabricItemSettings().maxCount(16).fireproof().rarity(Rarity.EPIC)));
+    public static final Item CHRONOS_BOOK = registerItem("chronos_book",
+            new ChronosBookItem(new FabricItemSettings().maxCount(1).fireproof().rarity(Rarity.EPIC)));
 
     private static void addItemsToInventoryTabItemGroup(FabricItemGroupEntries entries) {
         // entries.add(CHRONOS_PAGE);
