@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "chronicles:block/fishing_rod_stand"
+  }
+}

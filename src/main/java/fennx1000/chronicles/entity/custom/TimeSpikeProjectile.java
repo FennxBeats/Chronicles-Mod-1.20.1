@@ -19,7 +19,7 @@ import net.minecraft.world.World;
 
 public class TimeSpikeProjectile extends ThrownItemEntity {
 
-    private static final float DAMAGE_AMOUNT = 15.0F;
+    private static final float DAMAGE_AMOUNT = 20.0F;
     private ServerPlayerEntity shooter;
 
     public TimeSpikeProjectile(LivingEntity livingEntity, World world) {
@@ -46,7 +46,7 @@ public class TimeSpikeProjectile extends ThrownItemEntity {
             // Apply damage to the hit entity
             if (entityHitResult.getEntity() instanceof LivingEntity) {
                 LivingEntity target = (LivingEntity) entityHitResult.getEntity();
-                target.damage(this.getDamageSources().playerAttack(shooter), DAMAGE_AMOUNT);
+                target.damage(this.getDamageSources().playerAttack(this.getEntityWorld().getClosestPlayer(this, 1)), DAMAGE_AMOUNT);
                 this.discard();
             }
 

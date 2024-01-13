@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CDC",
+    "DBD",
+    "CDC"
+  ],
+  "key": {
+    "C": {
+      "item": "chronicles:chronos_page"
+    },
+    "B": {
+      "item": "minecraft:book"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    }
+  },
+  "result": {
+    "item": "chronicles:chronos_book"
+  }
+}

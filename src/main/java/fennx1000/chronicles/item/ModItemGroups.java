@@ -1,6 +1,7 @@
 package fennx1000.chronicles.item;
 
 import fennx1000.chronicles.Chronicles;
+import fennx1000.chronicles.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -16,6 +17,7 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.CHRONOS_PAGE)).entries((displayContext, entries) -> {
                         entries.add(ModItems.CHRONOS_BOOK);
                         entries.add(ModItems.CHRONOS_PAGE);
+                        entries.add(ModBlocks.FISHING_ROD_STAND);
                     }).build());
 
     public static void registerItemGroups() {
