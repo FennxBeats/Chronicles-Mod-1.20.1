@@ -16,8 +16,7 @@ public class ModBlockEntities {
             Registries.BLOCK_ENTITY_TYPE,
             new Identifier(Chronicles.MODID, "fishing_rod_stand_be"),
             FabricBlockEntityTypeBuilder.create(FishingRodStandEntity::new,
-                    ModBlocks.FISHING_ROD_STAND).build()
-    );;
+                    ModBlocks.FISHING_ROD_STAND).build());
     public static void registerBlockEntities() {
         Chronicles.LOGGER.info("Registering Block Entities for " + Chronicles.MODID);
     }
