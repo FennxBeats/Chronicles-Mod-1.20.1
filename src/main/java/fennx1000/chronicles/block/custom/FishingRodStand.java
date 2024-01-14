@@ -41,8 +41,8 @@ public class FishingRodStand extends BlockWithEntity {
             return ActionResult.SUCCESS;
         }
         BlockEntity blockEntity = world.getBlockEntity(pos);
-        if (blockEntity instanceof BarrelBlockEntity) {
-            player.openHandledScreen((BarrelBlockEntity)blockEntity);
+        if (blockEntity instanceof FishingRodStandEntity) {
+            player.openHandledScreen((FishingRodStandEntity)blockEntity);
 
         }
         return ActionResult.CONSUME;
