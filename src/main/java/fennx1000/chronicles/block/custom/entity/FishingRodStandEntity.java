@@ -1,5 +1,6 @@
 package fennx1000.chronicles.block.custom.entity;
 
+import fennx1000.chronicles.block.custom.FishingRodStand;
 import net.minecraft.block.BarrelBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -56,7 +57,7 @@ public class FishingRodStandEntity extends LootableContainerBlockEntity {
 
 
     void setOpen(BlockState state, boolean open) {
-
+        this.world.setBlockState(this.getPos(), (BlockState)state.with(FishingRodStand.OPEN, open), Block.NOTIFY_ALL);
         }
 
         private static final int SLOT1 = 0;
@@ -82,6 +83,26 @@ public class FishingRodStandEntity extends LootableContainerBlockEntity {
     @Override
     protected Text getContainerName() {
         return Text.literal("Fishing Rod Stand");
+    }
+
+    @Override
+    public void onOpen(PlayerEntity player) {
+        if (!this.removed && !player.isSpectator()) {
+            this.stateManager.openContainer(player, this.getWorld(), this.getPos(), this.getCachedState());
+        }
+    }
+
+    @Override
+    public void onClose(PlayerEntity player) {
+        if (!this.removed && !player.isSpectator()) {
+            this.stateManager.closeContainer(player, this.getWorld(), this.getPos(), this.getCachedState());
+        }
+    }
+
+    public void tick() {
+        if (!this.removed) {
+            this.stateManager.updateViewerCount(this.getWorld(), this.getPos(), this.getCachedState());
+        }
     }
 
     @Override
